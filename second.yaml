@@ -21,3 +21,8 @@
       dnf:
         name: tree
         state: present
+
+    - name: install java
+      dnf: 
+        name: "{{installjavaonredhat}}"
+        state: present

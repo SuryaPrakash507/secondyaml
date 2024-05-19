@@ -1,8 +1,0 @@
----
-hosts:
-become: yes
-tasks:
- - name: install java
-   dnf: 
-     name: "{{installjavaonredhat}}"
-     state: present
