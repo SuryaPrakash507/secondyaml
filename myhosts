@@ -2,6 +2,3 @@
 172.31.8.99
 172.31.45.9
 
-
-[productionservers:vars]
-mywebpackonredhat=htttttpd
