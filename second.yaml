@@ -1,9 +1,10 @@
 ---
 - hosts: productionservers
   become: yes
-  tasks:
   vars_files: 
     - mywebservers.yaml
+  tasks:
+
     - name: Install httpd
       dnf:
         name: "{{ mywebpackonredhat }}"
