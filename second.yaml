@@ -1,10 +1,9 @@
 ---
 - hosts: productionservers
   become: yes
-  tasks:
   vars_files:
-    - mywebservers.yaml
-
+    - vars.yml
+  tasks:
     - name: Install httpd
       dnf:
         name: "{{ mywebpackonredhat }}"
@@ -25,7 +24,7 @@
         name: tree
         state: present
 
-    - name: install java
-      dnf: 
+    - name: Install java
+      dnf:
         name: "{{ installjavaonredhat }}"
         state: present
