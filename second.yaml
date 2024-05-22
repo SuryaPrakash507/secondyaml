@@ -3,7 +3,7 @@
   become: yes
   tasks:
   vars_files:
-    - mywebservers
+    - mywebservers.yaml
 
     - name: Install httpd
       dnf:
