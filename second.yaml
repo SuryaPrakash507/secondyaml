@@ -2,7 +2,7 @@
 - hosts: productionservers
   become: yes
   vars_files:
-    - vars.yml
+    - mywebservers.yml
   tasks:
     - name: Install httpd
       dnf:
