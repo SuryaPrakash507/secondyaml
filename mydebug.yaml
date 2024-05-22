@@ -9,3 +9,15 @@
    - name: print my first command result
      debug:
        msg: "{{theabovehostnameis}}"
+
+   - name: install tree software
+     dnf:
+      name: tree
+      state: present
+     when: theabovehostnameis.stderr!=""
+
+   - name: install wget software
+     dnf:
+      name: wget
+      state: present
+     when: theabovehostnameis.stderr==""
