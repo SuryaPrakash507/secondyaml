@@ -7,5 +7,5 @@
      register: theabovehostnameis
 
    - name: print my first command result
-     degub:
+     debug:
        msg: "{{theabovehostnameis}}"
