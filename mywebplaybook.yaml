@@ -1,5 +1,5 @@
 ---
-hosts: application servers
-become: yes
-roles:
- - {role: mywebrole, when: ansible_os_family=="redhat"}
+- hosts: application servers
+  become: yes
+  roles:
+   - {role: mywebrole, when: ansible_os_family=="redhat"}
