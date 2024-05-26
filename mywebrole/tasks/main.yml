@@ -1,2 +1,24 @@
 ---
 # tasks file for mywebrole
+- name: Install git
+  dnf:
+        name: git
+        state: present
+
+- name: Install tree
+  dnf:
+        name: tree
+        state: present
+
+- name: Install webserver on node
+  dnf:
+        name: httpd
+        state: present
+  notify: startwebserver
+
+- name: copy index file into node
+  template:
+     src: templates\myindex.j2
+     dest: /var/www/html/index.html
+  notify: startwebserver
+        
