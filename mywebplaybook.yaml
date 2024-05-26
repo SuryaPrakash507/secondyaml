@@ -1,5 +1,5 @@
 ---
-hosts: 172.31.33.177
+hosts: application servers
 become: yes
 roles:
  - {role: mywebrole, when: ansible_os_family=="redhat"}
